@@ -5,9 +5,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlinestatus";
 import UserContext from "./UserContext";
-
-const API_URL =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9690247&lng=72.8205292&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+import { RESTAURANT_API } from "../utilis/constant"; // ✅ import from constants
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -22,17 +20,20 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(API_URL);
+      const data = await fetch(RESTAURANT_API); // ✅ uses constant
       const json = await data.json();
 
       const restaurants =
         json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [];
+          ?.restaurants ||
+        json?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
+        [];
 
       setListOfRestaurants(restaurants);
       setFilteredRestaurant(restaurants);
     } catch (error) {
-      console.error("Error fetching restaurants:", error);
+      console.warn("Error fetching restaurants:", error);
     }
   };
 

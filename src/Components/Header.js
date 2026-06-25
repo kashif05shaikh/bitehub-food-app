@@ -15,7 +15,11 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} alt="logo" />
+        <img className="logo" src={LOGO_URL} alt="BiteHub logo" />
+          <div className="brand-text">
+            <span className="brand-name">BiteHub</span>
+            <span className="brand-tagline">order. eat. repeat.</span>
+          </div>
       </div>
       <div className="nav-items">
         <ul>

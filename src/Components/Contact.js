@@ -23,7 +23,7 @@ const Contact = () => {
       {/* Navbar */}
       <nav className="contact-navbar">
         <div className="nav-logo">
-          🛵 Swi<span>ggy</span>
+          🛵 Bite<span>Hub</span>
         </div>
       </nav>
 
@@ -47,7 +47,7 @@ const Contact = () => {
               <h3>Email Us</h3>
               <p>
                 Reach out anytime at{" "}
-                <a href="mailto:support@swiggy.in">support@swiggy.in</a>
+                <a href="mailto:kashcorp149@gmail.com">support@bitehub.in</a>
               </p>
               <span className="info-badge">Reply within 2 hrs</span>
             </div>
@@ -69,7 +69,7 @@ const Contact = () => {
             <div className="info-icon">💬</div>
             <div className="info-text">
               <h3>Live Chat</h3>
-              <p>Chat with us live through the Swiggy app for fastest help.</p>
+              <p>Chat with us live through the BiteHub app for fastest help.</p>
               <span className="info-badge">Avg. wait: 2 min</span>
             </div>
           </div>
